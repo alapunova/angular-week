@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Stack Overview</title>
+    <link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' 
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel='stylesheet' type='text/css' href='./styles/mystyle.css' />
+</head>
+<body>
+    <header>
+        <h1 class='branding'>HTML, CSS and Javascript</h1>
+    </header>
+    <nav>
+        <!-- Ancor, hyperlink -->
+        <a href='https://developer.mozilla.org/en-US/docs/Web/Guide/Introduction_to_Web_development'>documentation</a> |
+        <a href='https://duckduckgo.com?q=AMZN stock price'>Stock price lookup</a> |
+        <a href='./other.html'>Other page</a>
+    </nav>
+    <article>
+        <section>
+            <h2>Front-End Web Technologies</h2>
+            <button id='btnDoStuff'>Go</button>
+            <p>A web browser displays a web page using</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript (ECMAScript)</li>
+            </ul>
+        </section>
+        <section>
+            <h3>HTML</h3>
+            <p>The hypertext markup language uses tags for different parts of the content</p>
+            <aside role="complementary">
+                <p>For example 'p' is a paragraph, 'ul' is an unordered list</p>
+                <p>Most content needs an open tag and a close tag</p>
+                <p>There are a few 'self-close' tags, e.g. 'br' <br/>, which is a line break</p>
+                <p>Tags may have attributes</p>
+                <img src='https://placekitten.com/240' alt='a kitten' title='a kitten'/>
+                <p>A tag and all its content is called an element</p>
+                <!-- alt tags for assistive technologies -->
+            </aside>
+        </section>
+        <section>
+            <h3>CSS</h3>
+            <!-- Inline CSS is not recommended -->
+            <p>Cascading Style sheets bring style to the content</p>
+            <ol>
+                <li>ID Style</li>
+                <li>Class Style</li>
+                <li>Tag Style</li>
+            </ol>
+        </section>
+        <section>
+            <h3>ECMAScript</h3>
+            <p>ECMAScript runs in the browser. Since 2015 we have ES6+</p>
+            <table>
+                <tr>
+                    <th>Idea</th><th>Example</th>
+                </tr>
+                <tr>
+                    <td>Let and Const</td><td>let n = 1</td>
+                </tr>
+                <tr>
+                    <td>Functions</td><td>const fn = ()=>{}</td>
+                </tr>
+                <tr>
+                    <td>String Interpolation</td><td>`${n}`</td>
+                </tr>
+                <tr>
+                    <td>Injecting Content</td><td id='content'></td>
+                </tr>
+
+               
+            </table>
+        </section>
+        <section>
+            <h3>Forms</h3>
+            <p>We can get user input via a form</p>
+            <!-- pressing submit on a form wipes the page and creates a fresh copy, form tag is not used today -->
+            <!-- js helps to validate and submit whenever you choose -->
+            <!-- <form> -->
+                <input placeholder='stock code'/>
+                <!-- Play with input for number, date, color, etc -->
+                <input type="number"/><br/>
+                <input type="date"/><br/>
+                <input type="color"/><br/>
+                <input type="password"/><br/>
+                <input type="submit"/><br/>
+                <input type="checkbox"/><br/>
+                <select>
+                    <option>Buy</option>
+                    <option>Sell</option>
+                    <option>Short</option>
+                    <option>Random</option>
+                </select>
+                <textarea></textarea>
+            <!-- </form> -->
+            <hr/>
+                <input id ='swcategory' placeholder="category"/>
+                <input id='swid' placeholder="id" type='number' max='6' min='1'/>
+                <button id='btnGetAPI'>Go</button><br/>
+                <!-- for debugging, not production -->
+                <pre id='swapi'>...watch here</pre>
+                <h4 id="swname"></h4>
+            <hr/>
+        </section>
+        <section>
+            <h3>Charts</h3>
+            <canvas id='myChart'></canvas>
+        </section>
+    </article>
+    <footer id='wibble'>&copy;2021 read our legal notice</footer>
+    <script src='./js/myscript.js'></script>
+    <!-- charting engine -->
+    <!-- other examples: d3, nvd3, chartjs, highcharts, etc. -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='./js/charting.js'></script>
+</body>
+</html>
